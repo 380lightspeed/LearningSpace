@@ -79,7 +79,6 @@ class CustomRNNLayer(nn.Module):
             ht_1 = ht
         
         hidden_states = torch.stack(hidden_states, dim=1)
-        print(hidden_states.shape)
         if self.return_sequences:
             y = self.linear_y(hidden_states)
             if self.output_seq_activation is not None:
